@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* margin: 0; */
+  background-color: black;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  color: orchid;
+  /* width: 80%; */
+}
+
+header pre {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+main {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  margin: 30px;
+  /* width 100%; */
+  /* grid-template-columns: 8ch auto; */
+}
+
+.card {
+  /* display: flex;
+  justify-content: space-around; */
+  display: block flex;
+  flex-direction: row;
+  border: dashed white;
+  border-top: transparent;
+  border-width: 2px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 3rem;
+  /* width: 30%; */
+  /* float: left;
+  width: 30%;
+  height: 30%; */
+}
+
+.card header {
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: orchid;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin-top: -40px;
+  /* text-shadow: 2px 2px white; */
+}
+
+.card div p {
+  color: orchid;
+  text-align: left;
+}
+
+.cardcontent pre {
+  text-align: left;
+  color: white;
+  background-image: linear-gradient(grey, orchid);
+  /* margin: 20px; */
+  border-radius: 20px;
+}
+
+/* Cards are split into two columns at 992px or smaller */
+@media screen and (min-width: 993px) {
+  .card {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card {
+    flex: 0 0 50%;
+  }
+}
+
+/* Cards are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 0 0 100%;
+  }
+}
